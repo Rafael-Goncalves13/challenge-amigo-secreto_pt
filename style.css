@@ -2,8 +2,8 @@
     --color-primary: #4B69FD;
     --color-secondary: #FFF9EB;
     --color-tertiary: #C4C4C4;
-    --color-button: #fe652b;
-    --color-button-hover: #e55720;
+    --color-button: #368a20;
+    --color-button-hover: #396a14;
     --color-text: #444444;
     --color-white: #FFFFFF;
 }
@@ -37,14 +37,50 @@ body {
     justify-content: center;
     align-items: center;
     padding: 40px 0 0;
+    background-image: linear-gradient(270deg, blue, #00ff00);
+   background-size: 600% 600%;
+   animation: gradientShift 8s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+#cu {
+    font-family: monospace;
+    font-size: 1.5rem;
+    margin-inline: auto;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 1px solid;
+    animation: typing 3s steps(30) forwards,
+    blink 3s step-end infinite;
+    color: white;
+    font-weight: bold;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 23%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
 }
 
 /* Seção de entrada */
 .input-section {
     flex: 60%;
     background-color: var(--color-secondary);
-    border: 1px solid #000;
-    border-radius: 64px 64px 0 0;
+    border: 2px solid #000;
     display: flex;
     flex-direction: column;
     align-items: center;
